@@ -19,20 +19,4 @@
 
 ---
 
-## 🏗️ Folder Structure
 
-kaushalsiksha/
-├─ index.html
-├─ internships.html
-├─ about.html
-├─ contact.html
-├─ css/
-│ └─ styles.css
-├─ js/
-│ └─ main.js
-├─ images/
-│ ├─ hero-1.jpg
-│ ├─ internship-webdev.jpg
-│ └─ ...
-└─ assets/
-└─ favicon.ico
