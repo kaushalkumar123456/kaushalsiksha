@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -7,160 +8,165 @@
   <meta name="description" content="KaushalSiksha connects students with verified internship programs. Gain skills, certificates and placement support." />
   <meta name="keywords" content="internships, skill training, KaushalSiksha, student internships, remote internships" />
   <meta name="author" content="KaushalSiksha" />
-  <!-- Open Graph -->
   <meta property="og:title" content="KaushalSiksha — Internships for Students" />
   <meta property="og:description" content="Start your career journey with KaushalSiksha internships." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="images/hero-1.jpg" />
+
   <link rel="icon" href="assets/favicon.ico" />
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-
-  <!-- CSS -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
-  <!-- NAV -->
-  <header class="site-header">
+  <header class="site-header" role="banner">
     <div class="container nav-wrap">
-      <a class="brand" href="index.html"><span class="logo-text">Kaushal<span class="blue">Siksha</span></span></a>
+      <a class="brand" href="index.html" aria-label="KaushalSiksha home">
+        <span class="logo-text">Kaushal<span class="accent">Siksha</span></span>
+      </a>
 
-      <nav class="nav">
-        <a href="index.html">Home</a>
-        <a href="internships.html">Internships</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
+      <nav class="nav" role="navigation" aria-label="Primary">
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="internships.html">Internships</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
         <a class="btn-register" href="https://forms.gle/your-form-id-here" target="_blank" rel="noopener">Register</a>
-        <button class="nav-toggle" id="navToggle" aria-label="toggle navigation">☰</button>
+        <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="siteNav" aria-label="Toggle navigation">☰</button>
       </nav>
     </div>
   </header>
 
-  <!-- HERO -->
-  <main>
+  <main id="main">
+    <!-- HERO -->
     <section class="hero">
       <div class="container hero-grid">
         <div class="hero-left">
-          <h1>Start Your Career Journey with KaushalSiksha Internships!</h1>
-          <p class="sub">Gain hands-on experience with top companies and boost your skills.</p>
+          <h1>Start your career journey with <span class="brand-word">KaushalSiksha</span> internships</h1>
+          <p class="hero-sub">Gain hands-on experience with verified mentors, build portfolio projects and get placement-ready.</p>
+
           <div class="hero-cta">
-            <a class="btn" href="#internships">View Internships</a>
-            <a class="btn btn-outline" href="https://forms.gle/your-form-id-here" target="_blank" rel="noopener">Register Now</a>
+            <a class="btn primary" href="#internships">View Internships</a>
+            <a class="btn outline" href="https://forms.gle/your-form-id-here" target="_blank" rel="noopener">Register Now</a>
           </div>
 
-          <div class="features">
-            <div class="feature">
-              <div class="icon">✅</div>
+          <ul class="hero-features">
+            <li>
+              <span class="feature-ico">✅</span>
               <div>
-                <h4>Verified Internships</h4>
-                <p>Only trusted opportunities with mentoring.</p>
+                <strong>Verified Internships</strong>
+                <div class="muted">Trusted opportunities with mentorship</div>
               </div>
-            </div>
-            <div class="feature">
-              <div class="icon">🧠</div>
+            </li>
+            <li>
+              <span class="feature-ico">🧠</span>
               <div>
-                <h4>Skill Development</h4>
-                <p>Hands-on projects to build your portfolio.</p>
+                <strong>Skill Development</strong>
+                <div class="muted">Project-based learning to build your portfolio</div>
               </div>
-            </div>
-            <div class="feature">
-              <div class="icon">💼</div>
+            </li>
+            <li>
+              <span class="feature-ico">💼</span>
               <div>
-                <h4>Placement Assistance</h4>
-                <p>Resume guidance & interview prep.</p>
+                <strong>Placement Assistance</strong>
+                <div class="muted">Resume guidance and interview prep</div>
               </div>
-            </div>
-          </div>
-
+            </li>
+          </ul>
         </div>
 
         <div class="hero-right">
-          <!-- Simple JS carousel -->
-          <div class="carousel" id="carousel">
-            <div class="slides">
-              <img src="images/hero-1.jpg" alt="students collaborating">
-              <img src="images/hero-2.jpg" alt="student coding">
-              <img src="images/hero-3.jpg" alt="teamwork">
+          <div class="carousel" id="carousel" aria-roledescription="carousel">
+            <div class="slides" aria-live="polite">
+              <img src="images/hero-1.jpg" alt="students collaborating" loading="lazy">
+              <img src="images/hero-2.jpg" alt="student coding" loading="lazy">
+              <img src="images/hero-3.jpg" alt="teamwork" loading="lazy">
             </div>
+
             <div class="carousel-controls">
-              <button id="prev">‹</button>
-              <button id="next">›</button>
+              <button id="prev" class="ctrl" aria-label="Previous slide">‹</button>
+              <button id="next" class="ctrl" aria-label="Next slide">›</button>
             </div>
+            <ol class="dots" id="dots" role="tablist"></ol>
           </div>
         </div>
       </div>
+
+      <!-- subtle floating shapes -->
+      <ul class="floating-shapes" aria-hidden="true">
+        <li style="--s:60;--left:8%;--d:0s"></li>
+        <li style="--s:36;--left:26%;--d:4s"></li>
+        <li style="--s:44;--left:48%;--d:2s"></li>
+        <li style="--s:24;--left:70%;--d:3s"></li>
+        <li style="--s:32;--left:90%;--d:7s"></li>
+      </ul>
     </section>
 
     <!-- INTERNSHIPS PREVIEW -->
     <section id="internships" class="internships container">
+      <div class="anim-bg" aria-hidden="true"></div>
       <h2>Featured Internships</h2>
       <p class="lead">Explore our most popular internships — apply using the register button.</p>
 
       <div class="cards-grid">
-        <!-- Card 1 -->
+        <!-- card short: reuse images from your assets -->
         <article class="card">
-          <img src="images/internship-webdev.jpg" alt="Web Development">
+          <img src="images/internship-webdev.jpg" alt="Web Development" loading="lazy">
           <div class="card-body">
             <h3>Web Development Internship</h3>
-            <p class="meta">Duration: 1 month · Mode: Remote</p>
-            <p>Learn HTML, CSS, JavaScript and build real projects.</p>
+            <p class="meta">Duration: 2 months · Mode: Remote</p>
+            <p>Learn frontend, backend and build real projects with weekly mentor reviews.</p>
             <a class="btn-sm" href="https://forms.gle/P7aV2FszcWsF2bi38" target="_blank" rel="noopener">Register Now</a>
           </div>
         </article>
 
-        <!-- Card 2 -->
         <article class="card">
-          <img src="images/internship-dm.jpg" alt="Digital Marketing">
+          <img src="images/internship-dm.jpg" alt="AI & ML" loading="lazy">
+          <div class="card-body">
+            <h3>Artificial Intelligence & Machine Learning</h3>
+            <p class="meta">Duration: 2 months · Mode: Remote</p>
+            <p>Hands-on model building, evaluation and deployment workflows.</p>
+            <a class="btn-sm" href="https://forms.gle/your-form-id-here" target="_blank" rel="noopener">Register Now</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="images/internship-graphic.jpg" alt="Data Science" loading="lazy">
+          <div class="card-body">
+            <h3>Data Science & Analytics</h3>
+            <p class="meta">Duration: 2 months · Mode: Remote</p>
+            <p>Master Python, visualization and data-driven decision-making through projects.</p>
+            <a class="btn-sm" href="https://forms.gle/your-form-id-here" target="_blank" rel="noopener">Register Now</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="images/internship-ds.jpg" alt="UI/UX Design" loading="lazy">
+          <div class="card-body">
+            <h3>UI/UX Design Internship</h3>
+            <p class="meta">Duration: 2 months · Mode: Remote</p>
+            <p>Design user-centred interfaces and create interactive prototypes.</p>
+            <a class="btn-sm" href="https://forms.gle/your-form-id-here" target="_blank" rel="noopener">Register Now</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="images/internship-content.jpg" alt="Digital Marketing" loading="lazy">
           <div class="card-body">
             <h3>Digital Marketing Internship</h3>
-            <p class="meta">Duration: 1 month · Mode: Remote</p>
-            <p>SEO, Ads, Social Media and analytics-based strategies.</p>
-            <a class="btn-sm" href="https://forms.gle/your-form-id-here" target="_blank" rel="noopener">Register Now</a>
-          </div>
-        </article>
-
-        <!-- Card 3 -->
-        <article class="card">
-          <img src="images/internship-graphic.jpg" alt="Graphic Design">
-          <div class="card-body">
-            <h3>Graphic Design Internship</h3>
-            <p class="meta">Duration: 1 month · Mode: Remote</p>
-            <p>Branding, posters, and UI design with hands-on briefs.</p>
-            <a class="btn-sm" href="https://forms.gle/your-form-id-here" target="_blank" rel="noopener">Register Now</a>
-          </div>
-        </article>
-
-        <!-- Card 4 -->
-        <article class="card">
-          <img src="images/internship-ds.jpg" alt="Data Science">
-          <div class="card-body">
-            <h3>Data Science Internship</h3>
             <p class="meta">Duration: 2 months · Mode: Remote</p>
-            <p>Python, Pandas, ML fundamentals & a capstone project.</p>
+            <p>SEO, content strategy and paid campaigns — real briefs and reporting.</p>
             <a class="btn-sm" href="https://forms.gle/your-form-id-here" target="_blank" rel="noopener">Register Now</a>
           </div>
         </article>
 
-        <!-- Card 5 -->
         <article class="card">
-          <img src="images/internship-content.jpg" alt="Content Writing">
+          <img src="images/internship-app.jpg" alt="Mobile App Development" loading="lazy">
           <div class="card-body">
-            <h3>Content Writing Internship</h3>
-            <p class="meta">Duration: 1 month · Mode: Remote</p>
-            <p>Blogs, SEO content & audience engagement strategies.</p>
-            <a class="btn-sm" href="https://forms.gle/your-form-id-here" target="_blank" rel="noopener">Register Now</a>
-          </div>
-        </article>
-
-        <!-- Card 6 -->
-        <article class="card">
-          <img src="images/internship-app.jpg" alt="App Development">
-          <div class="card-body">
-            <h3>App Development Internship</h3>
+            <h3>Mobile App Development (Flutter / React Native)</h3>
             <p class="meta">Duration: 2 months · Mode: Remote</p>
-            <p>Build mobile apps and publish a prototype to stores.</p>
+            <p>Build production-style apps with good architecture and testing practices.</p>
             <a class="btn-sm" href="https://forms.gle/your-form-id-here" target="_blank" rel="noopener">Register Now</a>
           </div>
         </article>
@@ -175,12 +181,8 @@
     <section class="testimonials container">
       <h2>What Our Interns Say</h2>
       <div class="test-grid">
-        <blockquote>
-          “The projects helped me build a portfolio — I got an interview within 2 months.” <cite>— Priya, Web Intern</cite>
-        </blockquote>
-        <blockquote>
-          “Hands-on mentorship and real tasks — great experience.” <cite>— Rohit, Data Intern</cite>
-        </blockquote>
+        <blockquote class="reveal">“The projects helped me build a portfolio — I got an interview within 2 months.” <cite>— Priya, Web Intern</cite></blockquote>
+        <blockquote class="reveal">“Hands-on mentorship and real tasks — great experience.” <cite>— Rohit, Data Intern</cite></blockquote>
       </div>
     </section>
 
@@ -189,7 +191,7 @@
       <div class="container footer-grid">
         <div>
           <h3>KaushalSiksha</h3>
-          <p>Empowering Students with Real-World Experience</p>
+          <p class="muted">Empowering students with real-world experience</p>
           <p>Email: <a href="mailto:support@kaushalsiksha.com">support@kaushalsiksha.com</a></p>
         </div>
 
@@ -217,13 +219,10 @@
         © 2025 KaushalSiksha.com – All Rights Reserved.
       </div>
     </footer>
-
   </main>
 
-  <!-- Back to top -->
-  <button id="backTop" title="Back to top">↑</button>
+  <button id="backTop" title="Back to top" aria-label="Back to top">↑</button>
 
-  <!-- JS -->
-  <script src="js/main.js"></script>
+  <script src="js/main.js" defer></script>
 </body>
 </html>
