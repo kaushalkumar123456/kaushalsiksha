@@ -19,6 +19,66 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+
+//   // Add near the end of the carousel setup in main.js (inside DOMContentLoaded)
+// window.addEventListener('resize', () => {
+//   // re-run update() so translateX uses current widths/100% correctly
+//   if (typeof update === 'function') {
+//     update();
+//   } else {
+//     // fallback: recalc by toggling transform (works with your existing translateX percentages)
+//     const slidesWrap = document.querySelector('.carousel .slides');
+//     if (slidesWrap) slidesWrap.style.transform = `translateX(-${index * 100}%)`;
+//   }
+// });
+
+//   // NAV TOGGLE (improved)
+// const toggles = document.querySelectorAll('.nav-toggle');
+// const mobileNav = document.querySelector('.nav-list');
+
+// toggles.forEach(btn => {
+//   btn.addEventListener('click', (e) => {
+//     const expanded = btn.getAttribute('aria-expanded') === 'true';
+//     btn.setAttribute('aria-expanded', String(!expanded));
+
+//     if (!mobileNav) return;
+
+//     if (expanded) {
+//       // close
+//       mobileNav.style.display = '';
+//       mobileNav.style.flexDirection = '';
+//       mobileNav.classList.remove('open');
+//     } else {
+//       // open as vertical menu
+//       mobileNav.style.display = 'flex';
+//       mobileNav.style.flexDirection = 'column';
+//       mobileNav.classList.add('open');
+//     }
+//   });
+// });
+
+// // Close mobile menu when clicking outside
+// document.addEventListener('click', (e) => {
+//   if (!mobileNav) return;
+//   const target = e.target;
+//   const isOpen = mobileNav.style.display === 'flex' && mobileNav.classList.contains('open');
+//   if (!isOpen) return;
+//   const inside = mobileNav.contains(target) || target.closest('.nav-toggle') || target.closest('.brand');
+//   if (!inside) {
+//     mobileNav.style.display = '';
+//     mobileNav.classList.remove('open');
+//     toggles.forEach(t => t.setAttribute('aria-expanded', 'false'));
+//   }
+// });
+
+
+
+
+
+
+
+  
+
   // CAROUSEL
   const carousel = document.getElementById('carousel');
   if (carousel) {
