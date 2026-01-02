@@ -128,4 +128,45 @@ document.addEventListener('DOMContentLoaded', () => {
     const timers = window.setInterval(()=>{}, 1000);
     for (let i=0; i<timers; i++) window.clearInterval(i);
   }
+
+
+
+
+    // ==============================
+  // CONTACT FORM (FORMSPREE AJAX)
+  // ==============================
+  const contactForm = document.getElementById('contactForm');
+
+  if (contactForm) {
+    contactForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      const formData = new FormData(contactForm);
+
+      try {
+        const res = await fetch("https://formspree.io/f/xvzgrrow", {
+          method: "POST",
+          body: formData,
+          headers: {
+            "Accept": "application/json"
+          }
+        });
+
+        if (res.ok) {
+          alert("✅ Message sent successfully!");
+          contactForm.reset();
+        } else {
+          alert("❌ Failed to send message. Please try again.");
+        }
+      } catch (error) {
+        alert("❌ Network error. Please try later.");
+      }
+    });
+  }
+
+
+
+
+
+
 });
