@@ -168,5 +168,35 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
+  // BENEFITS CLICK-TO-NEXT
+// const benefitItems = document.querySelectorAll(".benefit-item");
+// let currentBenefitIndex = 0;
+
+// benefitItems.forEach(item => {
+//   item.addEventListener("click", () => {
+//     benefitItems[currentBenefitIndex].classList.remove("active");
+
+//     currentBenefitIndex =
+//       (currentBenefitIndex + 1) % benefitItems.length;
+
+//     benefitItems[currentBenefitIndex].classList.add("active");
+//   });
+// });
+
+
+// BENEFITS – PROGRESSIVE REVEAL
+const benefitRows = document.querySelectorAll(".benefit-row");
+let lastVisibleIndex = 0;
+
+benefitRows.forEach((row, index) => {
+  row.addEventListener("click", () => {
+    if (index === lastVisibleIndex && lastVisibleIndex < benefitRows.length - 1) {
+      lastVisibleIndex++;
+      benefitRows[lastVisibleIndex].classList.add("visible");
+    }
+  });
+});
+
+
 
 });
