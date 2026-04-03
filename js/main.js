@@ -1,11 +1,4 @@
 
-/* main.js
-   - accessible nav toggle
-   - carousel with pause-on-hover, keyboard support
-   - reveal on scroll using IntersectionObserver
-   - back-to-top
-*/
-
 document.addEventListener('DOMContentLoaded', () => {
   // NAV TOGGLE
   const toggles = document.querySelectorAll('.nav-toggle');
@@ -129,9 +122,6 @@ document.addEventListener('DOMContentLoaded', () => {
     for (let i=0; i<timers; i++) window.clearInterval(i);
   }
 
-
-
-
     // ==============================
   // CONTACT FORM (FORMSPREE AJAX)
   // ==============================
@@ -163,26 +153,6 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
-
-
-
-
-
-  // BENEFITS CLICK-TO-NEXT
-// const benefitItems = document.querySelectorAll(".benefit-item");
-// let currentBenefitIndex = 0;
-
-// benefitItems.forEach(item => {
-//   item.addEventListener("click", () => {
-//     benefitItems[currentBenefitIndex].classList.remove("active");
-
-//     currentBenefitIndex =
-//       (currentBenefitIndex + 1) % benefitItems.length;
-
-//     benefitItems[currentBenefitIndex].classList.add("active");
-//   });
-// });
-
 
 // BENEFITS – PROGRESSIVE REVEAL
 const benefitRows = document.querySelectorAll(".benefit-row");
