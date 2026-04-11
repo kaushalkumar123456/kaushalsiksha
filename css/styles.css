@@ -1220,6 +1220,66 @@ blockquote{background:#d0daf7;padding:20px;border-radius:10px;font-style:italic;
   }
 }
 
+
+/* .announcement-bar {
+  background: linear-gradient(90deg, #007bff, #00c6ff);
+  color: white;
+  text-align: center;
+  padding: 10px;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.announcement-bar a {
+  color: yellow;
+  margin-left: 10px;
+  text-decoration: underline;
+} */
+
+.announcement-bar {
+  background: linear-gradient(90deg, #007bff, #00c6ff);
+  color: rgb(8, 8, 8);
+  overflow: hidden;           /* IMPORTANT */
+  white-space: nowrap;        /* IMPORTANT */
+  font-weight: 600;
+  font-size: 20px;
+  padding: 10px 0;
+}
+
+/* NEW */
+.marquee {
+  display: inline-block;
+  padding-left: 100%;
+  animation: scrollText 15s linear infinite;
+}
+
+@keyframes scrollText {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* OPTIONAL */
+.marquee a {
+  color: yellow;
+  margin-left: 10px;
+  text-decoration: underline;
+}
+
+/* BONUS: pause on hover */
+.marquee:hover {
+  animation-play-state: paused;
+}
+
+
+
+
+
+
+
 /* =========================
    WHY CHOOSE – IMAGE LAYOUT
    ========================= */
